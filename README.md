@@ -51,41 +51,22 @@ git push -u origin main
 
 ## Свой домен
 
-1. Купите домен (Reg.ru, Timeweb, Cloudflare и т.п.).
-2. В корне репозитория создайте файл `CNAME` с одной строкой — вашим доменом:
+Сайт уже на GitHub Pages:
 
-```
-galinaavedova.ru
-```
+https://huanmrvz.github.io/galina_site/
 
-3. У регистратора настройте DNS:
+Пошаговая подготовка и DNS-записи — в [DOMAIN.md](DOMAIN.md).
 
-**Вариант A — поддомен `www`:**
-
-| Тип   | Имя | Значение                         |
-|-------|-----|----------------------------------|
-| CNAME | www | `<USERNAME>.github.io`           |
-
-**Вариант B — apex-домен (без www):**
-
-| Тип | Имя | Значение        |
-|-----|-----|-----------------|
-| A   | @   | `185.199.108.153` |
-| A   | @   | `185.199.109.153` |
-| A   | @   | `185.199.110.153` |
-| A   | @   | `185.199.111.153` |
-
-4. В **Settings → Pages → Custom domain** укажите домен и дождитесь проверки DNS.
-5. Включите **Enforce HTTPS**.
-
-Подробнее: [документация GitHub Pages](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
+Кратко:
+1. Купите домен
+2. Пропишите DNS (A → GitHub IP, `www` → `huanmrvz.github.io`)
+3. Добавьте файл `CNAME` и укажите домен в **Settings → Pages**
+4. Включите **Enforce HTTPS**
 
 ## Что заменить перед публикацией
 
-- `assets/hero.jpg` и `assets/portrait.jpg` — на свои фото (сейчас стоят атмосферные placeholder-изображения).
-- Ссылку на Telegram-канал в блоке контактов (`https://t.me/...`).
-- Ссылку на профиль на портале психологов.
-- При необходимости — номер WhatsApp (`wa.me/79270060038`).
+- `assets/hero.jpg` — при желании заменить на своё атмосферное фото.
+- При смене домена обновить абсолютные URL в Open Graph-метатегах (`og:url`, `og:image`).
 
 ## Запись на консультацию
 
