@@ -679,6 +679,12 @@ h3 {
 .about__visual {
   position: relative;
   padding: 1.5rem 1.25rem 1.75rem;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.about__visual.is-visible {
+  animation: about-float 11s ease-in-out 0.85s infinite;
 }
 
 .about__visual::after {
@@ -1245,6 +1251,16 @@ h3 {
   }
 }
 
+@keyframes about-float {
+  0%,
+  100% {
+    transform: translate3d(-7px, 2px, 0) rotate(-0.55deg);
+  }
+  50% {
+    transform: translate3d(7px, -4px, 0) rotate(0.55deg);
+  }
+}
+
 @keyframes scan {
   0% {
     transform: translateX(-100%);
@@ -1380,6 +1396,7 @@ h3 {
   .hero__orb,
   .page-ambient__bloom,
   .about__glow,
+  .about__visual,
   .cursor-glow {
     animation: none !important;
   }
